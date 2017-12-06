@@ -32,4 +32,8 @@ class Artist
     return albums_by_artist.map {|album| Album.new(album)}
   end
 
+  def Artist.delete_all()
+    SqlRunner.run("DELETE FROM artists;")
+  end
+
 end
