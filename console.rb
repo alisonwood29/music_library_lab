@@ -16,6 +16,9 @@ artist_2 = Artist.new({
 artist_1.save()
 artist_2.save()
 
+artist_1.name = "Mon the Biff"
+artist_1.update()
+
 album_1 = Album.new({
   'title' => 'The Vertigo of Bliss',
   'genre' => 'Alternative Rock',
@@ -47,6 +50,8 @@ albums = Album.all
 artists_albums = artist_1.albums()
 
 album_artist = album_1.artist()
+
+Album.find(37)
 
 binding.pry
 nil
